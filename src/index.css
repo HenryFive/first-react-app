@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./Assets/font/ProximaNova-Regular.woff2') format('woff2'),
+      url('./Assets/font/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./Assets/font/ProximaNova-Bold.woff2') format('woff2'),
+      url('./Assets/font/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./Assets/font/ProximaNova-Thin.woff2') format('woff2'),
+      url('./Assets/font/ProximaNova-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./Assets/font/ProximaNova-Light.woff2') format('woff2'),
+      url('./Assets/font/ProximaNova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./Assets/font/ProximaNova-Semibold.woff2') format('woff2'),
+      url('./Assets/font/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

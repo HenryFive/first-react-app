@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './Assets/font/ProximaNova-Regular.woff2';
+import './Assets/font/ProximaNova-Bold.woff2';
+import './Assets/font/ProximaNova-Thin.woff2';
+import './Assets/font/ProximaNova-Light.woff2';
+import './Assets/font/ProximaNova-Semibold.woff2';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

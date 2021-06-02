@@ -1,5 +1,5 @@
 import './Bottom1.scss';
-import Card from '../Card/Card.js';
+import Card from './Card/Card.js';
 
 function Bottom1() {
     return (
