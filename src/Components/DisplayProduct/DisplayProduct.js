@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import './DisplayProduct.scss';
 import SelectColor from './SelectColor/SelectColor.js';
 import SelectSize from './SelectSize/SelectSize.js';
