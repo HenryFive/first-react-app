@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './Components/Header/Header.js';
+<<<<<<< HEAD
 import Banner from './Components/Banner/Banner.js';
 import Middle from './Components/Middle/Middle.js';
 import Bottom1 from './Components/Bottom1/Bottom1.js';
@@ -9,11 +10,14 @@ import Bottom4 from './Components/Bottom4/Bottom4.js';
 import DisplayProduct from './Components/DisplayProduct/DisplayProduct.js';
 import Footer from './Components/Footer/Footer.js';
 
+=======
+>>>>>>> parent of 0504a8a (initial codes)
 
 function App() {
   return (
     <div className="App">
       <Header />
+<<<<<<< HEAD
       <Banner />
       <Middle />
       <Bottom1 />
@@ -23,6 +27,8 @@ function App() {
       <DisplayProduct />
       <Footer />
 
+=======
+>>>>>>> parent of 0504a8a (initial codes)
     </div>
   );
 }

@@ -3,7 +3,8 @@
 import './DisplayProduct.scss';
 import SelectColor from './SelectColor/SelectColor.js';
 import SelectSize from './SelectSize/SelectSize.js';
-import SelectQuantity from './SelectQuantity/SelectQuantity.js'
+import Quantity2 from './Quantity2/Quantity2.js';
+
 function DisplayProduct() {
     return (
         <section class="main__product--info wrapper">
@@ -54,7 +55,7 @@ function DisplayProduct() {
                     <hr />
 
                     <section class="main__product--bottom">
-                        <SelectQuantity />
+                        <Quantity2 />
 
                         <section class="main__product--cart">
                             <a href="#" class="main__product--add-to-cart"><i class="fas fa-shopping-cart"></i>Add to Cart</a>
