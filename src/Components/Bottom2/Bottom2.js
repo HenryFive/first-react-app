@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './Bottom2.scss';
 
 function Bottom2() {
