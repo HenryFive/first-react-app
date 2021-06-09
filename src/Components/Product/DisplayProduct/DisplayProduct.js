@@ -2,7 +2,7 @@ import './DisplayProduct.scss';
 
 function DisplayProduct() {
     return (
-        <section class="main__product--upper wrapper">
+        <section class="main__product--upper">
             <section class="main__product--image">
                 <img class="main__product--image--big" src="images/black_hero_retina_1800x1800_V2.png" alt="Beat Solo 2 on Ear Headphones - Black" />
                 <footer class="main__product--thumbnail">
