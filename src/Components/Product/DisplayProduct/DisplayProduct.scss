@@ -6,11 +6,6 @@ hr{
 }
 
 .main{
-    margin-bottom: 90px;
-
-    & > .wrapper{
-        justify-content: space-between;
-    }
 
     &__product{
         &--image{
@@ -53,6 +48,7 @@ hr{
         &--details{
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
         }
         &--title{
             font-weight: 600;
@@ -70,6 +66,7 @@ hr{
             }
         }
 
+
         &--submit{
             color: #33A0FF;
         }
@@ -86,6 +83,7 @@ hr{
                 max-width: 100%;
                 display: inline-block;
                 font-weight: bold;
+                text-align: left;
             }
         }
 
@@ -197,14 +195,11 @@ hr{
             align-items: center;
         }
 
-        @mixin flexStyle{
+
+        &--cart{
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        &--cart{
-            @include flexStyle();
         }
 
         &--add-to-cart{
@@ -213,7 +208,9 @@ hr{
             background: RGBA(51, 160, 255, 0.2);
             color: #33A0FF;
             font-weight: 600;
-            @include flexStyle();
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-right: 16px;
         }
 
@@ -374,4 +371,35 @@ hr{
             margin-top: 31px;
         }
     }
+}
+
+.cart-section__table-row--qty{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 2 20%;
+    flex: 1 2 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0;
+}
+
+.cart-section__table-row--qty--minus-btn{
+    background-color: #F6F7F8;
+    width: 30px;
+    height: 30px;
+}
+
+.cart-section__table-row--qty--number {
+    background-color: #F6F7F8;
+    width: 30px;
+    height: 30px;
+    line-height: 2.3em;
+}
+
+.cart-section__table-row--qty--minus-btn, .cart-section__table-row--qty--plus-btn {
+    border: 0;
+    background-color: #F6F7F8;
+    width: 30px;
+    height: 30px;
+    color: #33A0FF;
 }
