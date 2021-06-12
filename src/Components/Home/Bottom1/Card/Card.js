@@ -1,6 +1,6 @@
 import './Card.scss';
 
-function Card() {
+function Card(props) {
     return (
         <div class="bottom1__card bottom1__card--hot">
             <div class="bottom1__card__flip">
@@ -16,15 +16,15 @@ function Card() {
                     </div>
                 </div>
             </div>
-            <h3 class="bottom1__card__title">Apple Macbook Pro</h3>
+            <h3 class="bottom1__card__title">{props.modelName}</h3>
             <i class="fas fa-star bottom1__card__star"></i>
             <i class="fas fa-star bottom1__card__star"></i>
             <i class="fas fa-star bottom1__card__star"></i>
             <i class="fas fa-star bottom1__card__star"></i>
             <i class="fas fa-star bottom1__card__star"></i>
             <footer class="bottom1__card__footer">
-                <span class="bottom1__card__price">$499</span>
-                <span class="bottom1__card__price bottom1__card__price--before">$599</span>
+                <span class="bottom1__card__price">{props.currentPrice}</span>
+                <span class="bottom1__card__price bottom1__card__price--before">{props.regularPrice}</span>
             </footer>
         </div>
     )

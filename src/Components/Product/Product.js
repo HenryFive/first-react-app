@@ -1,13 +1,19 @@
 import './Product.scss'
-import Header from './Header/Header.js';
 import DisplayProduct from './DisplayProduct/DisplayProduct.js';
+import Aside from './Aside/Aside.js';
+import Bottom1 from './Bottom1/Bottom1.js';
+
 function Product() {
     return ( 
-        <section id="main" class="main">
-            <section class="wrapper">
-                
+        <Product>
+            <section id="main" class="main">
+                <section class="wrapper">
+                    <DisplayProduct />
+                    <Aside />
+                </section>
             </section>
-        </section>
+            <Bottom1 />
+        </Product>
     )
 }
 
