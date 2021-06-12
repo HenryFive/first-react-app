@@ -8,7 +8,7 @@ const cardData = [
     { modelName : "Asus Rog G15", currentPrice : 399, regularPrice : 499 },
 ]
 
-function Bottom1(props) {
+function Bottom1() {
     return (
         <section id="bottom1" class="bottom1">
             <section class="wrapper">
@@ -16,6 +16,7 @@ function Bottom1(props) {
                     <h2>Related Products</h2>
                 </header>
                 <article class="bottom1__products bottom1__products--margin">
+                
                     {cardData.map(item => (
                         <Card modelName={item.modelName} currentPrice={item.currentPrice} regularPrice={item.regularPrice} />
                     ))}

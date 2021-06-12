@@ -5,7 +5,7 @@ import Bottom1 from './Bottom1/Bottom1.js';
 
 function Product() {
     return ( 
-        <Product>
+        <section>
             <section id="main" class="main">
                 <section class="wrapper">
                     <DisplayProduct />
@@ -13,7 +13,7 @@ function Product() {
                 </section>
             </section>
             <Bottom1 />
-        </Product>
+        </section>
     )
 }
 
