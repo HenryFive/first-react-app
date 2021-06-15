@@ -1,4 +1,18 @@
 import './DisplayProduct.scss';
+import SelectQuantity from './SelectQuantity/SelectQuantity.js';
+import SelectColor from './SelectColor/SelectColor.js';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+    faStar,
+    faCaretDown,
+    faShoppingCart,
+    faHeart    
+} from '@fortawesome/free-solid-svg-icons';
+import {
+    faFacebookF,
+    faTwitter
+} from '@fortawesome/free-brands-svg-icons';
 
 function DisplayProduct() {
     return (
@@ -16,11 +30,11 @@ function DisplayProduct() {
                 <section class="main__product--details">
                     <h3 class="main__product--title">Beats Solo2 On Ear Headphones - Black</h3>
                     <section class="main__product--review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
                         <span>0 Reviews</span>
                         <a href="#" class="main__product--submit">Submit a review</a>
                     </section>
@@ -42,34 +56,21 @@ function DisplayProduct() {
                         <span>Free Shipping </span>
                     </section>
                     <hr />
-                    <section class="main__product--color">
-                        <span>Select Color: </span>
-                        <aside class="main__product--select_color">
-                            <span class="main__product--white" onclick="selectWhite()"></span>
-                            <span class="main__product--red" onclick="selectRed()"></span>
-                            <span class="main__product--pink" onclick="selectPink()"></span>
-                            <span class="main__product--black" onclick="selectBlack()"></span>
-                            <span class="main__product--copper" onclick="selectCopper()"></span>
-                        </aside>
-                    </section>
+                    <SelectColor />
 
                     <section class="main__product--ship main__product--size">
                         <span>Size </span>
-                        <span class="main__product--sizes">XS <i class="fas fa-caret-down"></i></span>
+                        <span class="main__product--sizes">XS <FontAwesomeIcon icon={faCaretDown} /></span>
                     </section>
 
                     <hr />
 
                     <section class="main__product--bottom">
-                        <section class="cart-section__table-row--qty main__product--quantity">
-                            <button class="cart-section__table-row--qty--minus-btn" id="qty-minus-btn">-</button>
-                            <div class="cart-section__table-row--qty--number">2</div>
-                            <button class="cart-section__table-row--qty--plus-btn" id="qty-plus-btn">+</button>
-                        </section>
+                        <SelectQuantity />
 
                         <section class="main__product--cart">
-                            <a href="#" class="main__product--add-to-cart"><i class="fas fa-shopping-cart"></i>Add to Cart</a>
-                            <i class="far fa-heart main__product--heart"></i>
+                            <a href="#" class="main__product--add-to-cart"><FontAwesomeIcon icon={faShoppingCart} />Add to Cart</a>
+                            <FontAwesomeIcon icon={faHeart} class="main__product--heart" />
                         </section>
                     </section>
 
@@ -77,9 +78,9 @@ function DisplayProduct() {
                     
                     <section class="main__product--social-media">
                         <a href="#" class="main__product--facebook">
-                            <i class="fab fa-facebook-f"></i>Share on Facebook</a>
+                            <FontAwesomeIcon icon={faFacebookF} />Share on Facebook</a>
                         <a href="#" class="main__product--twitter">
-                            <i class="fab fa-twitter"></i>Share on Twitter</a>
+                            <FontAwesomeIcon icon={faTwitter} />Share on Twitter</a>
                     </section>
                 </section>
             </section>

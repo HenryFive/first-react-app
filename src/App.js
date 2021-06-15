@@ -1,4 +1,5 @@
 import './App.css';
+
 import Header from './Components/Header/Header.js';
 import Banner from './Components/Home/Banner/Banner.js';
 import Middle from './Components/Home/Middle/Middle.js';
@@ -22,7 +23,6 @@ function App() {
               <Bottom2 />
               <Bottom3 />
               <Bottom4 />
-
             </Route>
             <Route path="/product">
               <Product />

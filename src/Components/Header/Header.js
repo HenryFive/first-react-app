@@ -1,17 +1,25 @@
 import './Header.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+    faCaretDown, 
+    faUser, 
+    faShoppingBasket, 
+    faSearch,
+    faBars 
+} from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     return (
         <div class="wrapper">
         <header class="header">
             <div class="header__top">
-                <span>EN&nbsp; <i class="fas fa-caret-down"></i></span>
-                <span>USD&nbsp; <i class="fas fa-caret-down"></i> </span>
-                <div class="header__top--user-profile"><i class="far fa-user"></i> My Profile</div>
+                <span>EN&nbsp; <FontAwesomeIcon icon={faCaretDown} /></span>
+                <span>USD&nbsp; <FontAwesomeIcon icon={faCaretDown} /></span>
+                <div class="header__top--user-profile"><FontAwesomeIcon icon={faUser} /> My Profile</div>
                 <div class="header__top--cart">
-                    <a href="cart.html" class=""><i class="fas fa-shopping-basket"></i> 0 Items <span>$0.00</span></a>
+                    <a href="cart.html" class=""><FontAwesomeIcon icon={faShoppingBasket} /> 0 Items <span>$0.00</span></a>
                 </div>
-                <div class="header__top--search-icon"><i class="fas fa-search"></i></div>
+                <div class="header__top--search-icon"><FontAwesomeIcon icon={faSearch} /></div>
             </div>
             <div class="header--brand">
                 <h1>RAKU<span>TECH</span></h1>
@@ -19,7 +27,7 @@ function Header() {
             <nav class="header__main-nav header__mobile">
                 <section class="header__nav">
                     <button type="button" class="header__main-nav--toggle">
-                        <i class="fas fa-bars"></i>
+                    <FontAwesomeIcon icon={faBars} />
                     </button>
     
                     <div class="header--brand header__mobile--logo">
@@ -27,7 +35,7 @@ function Header() {
                     </div>
     
                     <div class="header__top--cart header__mobile--cart">
-                        <a href="cart.html" class=""><i class="fas fa-shopping-basket"></i></a>
+                        <a href="cart.html" class=""><FontAwesomeIcon icon={faShoppingBasket} /></a>
                     </div>
                 </section>
 
@@ -40,7 +48,7 @@ function Header() {
                             <a href="index.html" class="header__main-nav--home active" onmouseover="moveArrow('14px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">
                                 HOME
                             </a>
-                            <span class="header__main-nav--carret"><i class="fas fa-caret-down"></i></span>
+                            <span class="header__main-nav--carret"><FontAwesomeIcon icon={faCaretDown} /></span>
                             
     
                             <nav class="header__mega-menu">
