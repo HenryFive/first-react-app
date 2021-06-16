@@ -1,23 +1,22 @@
 import './ProductList.scss';
 import ProductListCard from './ProductListCard/ProductListCard'
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { getList } from '../../Services/list';
 
-
-
 function ProductList(props) {
-    const [list, setList] = useState([]);
-
-    useEffect(() => {
-        let mounted = true;
-        getList()
-        .then(items => {
-            if(mounted) {
-            setList(items)
-            }
-        })
-        return () => mounted = false;
-    }, [])
+    const [data, loading] = getList('https://fakestoreapi.com/products?limit=10');
+    
+    // useEffect(() => {
+    //         let mounted = true;
+    //         getList()
+    //         .then(items => {
+    //             if(mounted) {
+    //             setList(items)
+    //             }
+    //         })
+    //         return () => mounted = false;
+    //     };
+    // }, [])
 
     return (
         <section class="product-listing wrapper">
@@ -102,17 +101,22 @@ function ProductList(props) {
                     <button id="display-as-list"><i class="fas fa-bars"></i></button>
                 </nav>
             </nav>
-            
-            {list.map(item =>  
-                <ProductListCard 
-                    modelName={item.title} 
-                    currentPrice={(item.price*0.9).toFixed(2)} 
-                    regularPrice={item.price} 
-                    description={item.description}
-                    image={item.image}
-                />
-            )}
-
+            <Fragment>
+                {loading ? (
+                        <div class="loader"></div>
+                    ) : (
+                        data.map(data =>  (
+                            <ProductListCard 
+                                modelName={data.title} 
+                                currentPrice={(data.price*0.9).toFixed(2)} 
+                                regularPrice={data.price} 
+                                description={data.description}
+                                image={data.image}
+                            />
+                        ))
+                    )
+                }
+            </Fragment>
             <nav class="product-listing__products__pagination">
                 <ol>
                     <li><a href="">1</a></li>
