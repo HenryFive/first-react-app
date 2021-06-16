@@ -1,6 +1,12 @@
 import './Card.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { 
+    faStar,
+    faShoppingCart   
+} from '@fortawesome/free-solid-svg-icons';
+
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
+
 
 function Card(props) {
     return (
@@ -12,8 +18,8 @@ function Card(props) {
                     </div>
                     <div class="bottom1__card__back">
                         <section class="bottom1__card__favCart">
-                            <i class="bottom1__card__icon far fa-heart"></i>
-                            <i class="bottom1__card__icon fas fa-shopping-cart"></i>
+                            <FontAwesomeIcon icon={farHeart} class="bottom1__card__icon"/>
+                            <FontAwesomeIcon icon={faShoppingCart} class="bottom1__card__icon"/>
                         </section>
                     </div>
                 </div>

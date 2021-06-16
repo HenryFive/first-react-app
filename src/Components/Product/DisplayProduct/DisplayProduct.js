@@ -9,6 +9,7 @@ import {
     faShoppingCart,
     faHeart    
 } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
 import {
     faFacebookF,
     faTwitter
@@ -70,7 +71,7 @@ function DisplayProduct() {
 
                         <section class="main__product--cart">
                             <a href="#" class="main__product--add-to-cart"><FontAwesomeIcon icon={faShoppingCart} />Add to Cart</a>
-                            <FontAwesomeIcon icon={faHeart} class="main__product--heart" />
+                            <FontAwesomeIcon icon={farHeart} class="main__product--heart" />
                         </section>
                     </section>
 
