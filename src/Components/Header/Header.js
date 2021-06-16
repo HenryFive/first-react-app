@@ -1,4 +1,6 @@
 import './Header.scss'
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
     faCaretDown, 
@@ -45,9 +47,9 @@ function Header() {
                             <div class="header__main-nav__arrow-guide">
                                 <i id="main-nav-arrow" class="header__main-nav__arrow-guide--arrow-up"></i>
                             </div>
-                            <a href="index.html" class="header__main-nav--home active" onmouseover="moveArrow('14px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">
+                            <Link to="/" class="header__main-nav--home active" onmouseover="moveArrow('14px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">
                                 HOME
-                            </a>
+                            </Link>
                             <span class="header__main-nav--carret"><FontAwesomeIcon icon={faCaretDown} /></span>
                             
     
@@ -88,10 +90,10 @@ function Header() {
                             </nav>
                         </li>
                         <li><a href="" class="header__main-nav--store" onmouseover="moveArrow('115px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">STORE</a></li>
-                        <li><a href="" class="header__main-nav--iphone" onmouseover="moveArrow('220px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">IPHONE</a></li>
+                        <li><Link to="/product" class="header__main-nav--iphone" onmouseover="moveArrow('220px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">IPHONE</Link></li>
                         <li><a href="" class="header__main-nav--ipad" onmouseover="moveArrow('321px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">IPAD</a></li>
                         <li><a href="" class="header__main-nav--macbook" onmouseover="moveArrow('432px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">MACBOOK</a></li>
-                        <li><a href="product.html" class="header__main-nav--accessories" onmouseover="moveArrow('570px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">ACCESSORIES</a></li>
+                        <li><Link to="/product-list" class="header__main-nav--accessories" onmouseover="moveArrow('570px')" onmouseout="slowlyHideHeaderDropDownMenuNow()">ACCESSORIES</Link></li>
                     </ul>
                 </secition>
             </nav>

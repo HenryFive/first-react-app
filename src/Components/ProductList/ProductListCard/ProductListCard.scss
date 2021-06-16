@@ -21,7 +21,8 @@
         img{
             margin: auto;
             height: auto;
-            width: 200px;
+            max-height: 200px;
+            max-width: 200px;
         }
     }
     &__details{
@@ -40,15 +41,18 @@
             align-items: baseline;
             
             .glow{
-                width: 1em;
+                width: 1.01em;
                 color: #FFC600;
             }
 
         }
         hr{
+            display: block;
             border-top: 2px #f6f7f8 solid;
             border-left: 0;
+            margin: 0;
             max-width: 400px;
+            height: 0;
             
         }
         &--price{

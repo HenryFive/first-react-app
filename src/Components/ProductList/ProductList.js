@@ -1,7 +1,24 @@
 import './ProductList.scss';
 import ProductListCard from './ProductListCard/ProductListCard'
+import React, { useEffect, useState } from 'react';
+import { getList } from '../../Services/list';
+
+
 
 function ProductList(props) {
+    const [list, setList] = useState([]);
+
+    useEffect(() => {
+        let mounted = true;
+        getList()
+        .then(items => {
+            if(mounted) {
+            setList(items)
+            }
+        })
+        return () => mounted = false;
+    }, [])
+
     return (
         <section class="product-listing wrapper">
 
@@ -86,12 +103,15 @@ function ProductList(props) {
                 </nav>
             </nav>
             
-            <ProductListCard />
-            <ProductListCard />
-            <ProductListCard />
-            <ProductListCard />
-            <ProductListCard />
-            <ProductListCard />
+            {list.map(item =>  
+                <ProductListCard 
+                    modelName={item.title} 
+                    currentPrice={(item.price*0.9).toFixed(2)} 
+                    regularPrice={item.price} 
+                    description={item.description}
+                    image={item.image}
+                />
+            )}
 
             <nav class="product-listing__products__pagination">
                 <ol>
