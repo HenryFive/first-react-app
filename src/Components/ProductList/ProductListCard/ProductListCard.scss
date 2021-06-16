@@ -28,6 +28,7 @@
     &__details{
         padding-left: 30px;
         display: flex;
+        min-height: 278px;
         flex-direction: column;
         align-items: flex-start;
         &--title{
@@ -47,13 +48,12 @@
 
         }
         hr{
-            display: block;
-            border-top: 2px #f6f7f8 solid;
+            border-top: 3px #f6f7f8 solid;
             border-left: 0;
             margin: 0;
+            width: 100%;
             max-width: 400px;
-            height: 0;
-            
+           
         }
         &--price{
             display: block;
