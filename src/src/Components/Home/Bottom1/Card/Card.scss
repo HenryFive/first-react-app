@@ -129,9 +129,8 @@ a{
         }
 
         &__image {
-            max-height: 200px;
-            max-width: 200px;
-            width: auto;
+            width: 200px;
+            height: auto;
         }
         &__inner{
             position: relative;

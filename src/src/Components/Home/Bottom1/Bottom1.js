@@ -1,6 +1,5 @@
 import './Bottom1.scss';
 import Card from './Card/Card.js';
-import { getList } from '../../../Services/list';
 
 const cardData = [
     { modelName : "Apple MacBook Pro", currentPrice : 499, regularPrice : 599 },
@@ -12,10 +11,7 @@ const cardData = [
     { modelName : "iPhone X", currentPrice : 389, regularPrice : 489 },
     { modelName : "iPhone 8", currentPrice : 349, regularPrice : 449 }
 ]
-
 function Bottom1() {
-    const [data, loading] = getList('https://fakestoreapi.com/products?limit=10');
-
     return (
     <section id="bottom1" class="bottom1">
         <section class="wrapper">
@@ -34,19 +30,15 @@ function Bottom1() {
             </header>
 
             <article class="bottom1__products">
-            {loading ? (
-                    <div class="loader"></div>
-                ) : (
-                    data.map(data =>  (
-                        <Card 
-                            modelName={data.title} 
-                            currentPrice={(data.price*0.9).toFixed(2)} 
-                            regularPrice={data.price} 
-                            image={data.image}
-                        />
-                    ))
-                )
-            }    
+                <Card modelName={cardData[0].modelName} currentPrice={cardData[0].currentPrice} regularPrice={cardData[0].regularPrice} />
+                <Card modelName={cardData[1].modelName} currentPrice={cardData[1].currentPrice} regularPrice={cardData[1].regularPrice} />
+                <Card modelName={cardData[2].modelName} currentPrice={cardData[2].currentPrice} regularPrice={cardData[2].regularPrice} />
+                <Card modelName={cardData[3].modelName} currentPrice={cardData[3].currentPrice} regularPrice={cardData[3].regularPrice} />
+                <Card modelName={cardData[4].modelName} currentPrice={cardData[4].currentPrice} regularPrice={cardData[4].regularPrice} />
+                <Card modelName={cardData[5].modelName} currentPrice={cardData[5].currentPrice} regularPrice={cardData[5].regularPrice} />
+                <Card modelName={cardData[6].modelName} currentPrice={cardData[6].currentPrice} regularPrice={cardData[6].regularPrice} />
+                <Card modelName={cardData[7].modelName} currentPrice={cardData[7].currentPrice} regularPrice={cardData[7].regularPrice} />
+                
             </article>
             <a href="#" class="bottom1__button">Load More</a>
         </section>

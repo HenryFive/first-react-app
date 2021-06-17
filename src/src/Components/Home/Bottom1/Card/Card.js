@@ -14,7 +14,7 @@ function Card(props) {
             <div class="bottom1__card__flip">
                 <div class="bottom1__card__inner">
                     <div class="bottom1__card__front">
-                        <img src={props.image} alt="Macbook Pro" class="bottom1__card__image" />
+                        <img src="images/macbook-pro.png" alt="Macbook Pro" class="bottom1__card__image" />
                     </div>
                     <div class="bottom1__card__back">
                         <section class="bottom1__card__favCart">
